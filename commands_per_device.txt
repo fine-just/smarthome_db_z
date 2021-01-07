@@ -1,0 +1,6 @@
+SELECT count(device_id_ele) as entoles,device_id_ele
+FROM pragmatopoiei,elegxei
+where command_id_ele in(SELECT command_id_pragma FROM pragmatopoiei) and command_id_ele=command_id_pragma 
+AND device_id_ele in (SELECT device_id FROM syskeyi)
+GROUP by device_id_ele
+ORDER by entoles ASC
